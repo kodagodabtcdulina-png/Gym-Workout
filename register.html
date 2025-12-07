@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>NuggetsGYM - Register Now</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV BAR -->
+<nav class="navbar">
+  <div class="logo">
+    <a href="index.html">NuggetsGYM</a>
+  </div>
+  <ul>
+    <li><a href="about.html">About</a></li>
+    <li><a href="register.html">Register Now</a></li>
+    <li><a href="more.html">More</a></li>
+  </ul>
+</nav>
+
+<div class="background-glow circle1"></div>
+<div class="background-glow circle2"></div>
+<div class="background-glow circle3"></div>
+<div class="background-glow circle4"></div>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <h1 class="gym-name glowing-logo">Power Up</h1>
+  <p class="quote">"Transform your body, transform your life."</p>
+</section>
+
+<!-- REGISTER FORM SECTION -->
+<section class="register-section">
+  <div class="glass-card register-card">
+    <h2>Register Now</h2>
+    <form action="#" method="POST">
+      <input type="text" name="fullName" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <input type="text" name="age" placeholder="Age" required>
+      <select name="membership" required>
+        <option value="" disabled selected>Select Membership Plan</option>
+        <option value="monthly">Monthly</option>
+        <option value="quarterly">Quarterly</option>
+        <option value="yearly">Yearly</option>
+      </select>
+      <textarea name="goals" placeholder="Your Fitness Goals" required></textarea>
+      <button type="submit">Register</button>
+    </form>
+  </div>
+</section>
+
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+   })();
+</script>
+
+
+
+<!-- CONTACT SECTION -->
+<section class="contact">
+  <h2>Contact Us</h2>
+
+  <div class="branches">
+    <div class="branch">
+      <h3>Main Branch</h3>
+      <p><strong>Address:</strong> 123 Fitness Street, Colombo, Sri Lanka</p>
+      <p><strong>Phone:</strong> +94 11 123 4567</p>
+      <p><strong>Email:</strong> mainbranch@nuggetsgym.com</p>
+      <p><strong>Instagram:</strong> <a href="https://instagram.com/nuggetsgym" target="_blank">@nuggetsgym</a></p>
+      <p><strong>Facebook:</strong> <a href="https://facebook.com/nuggetsgym" target="_blank">NuggetsGYM</a></p>
+      <p><strong>Google Maps:</strong> <a href="https://goo.gl/maps/xxxx" target="_blank">View Location</a></p>
+    </div>
+
+    <div class="branch">
+      <h3>North Branch</h3>
+      <p><strong>Address:</strong> 45 Wellness Avenue, Kandy, Sri Lanka</p>
+      <p><strong>Phone:</strong> +94 81 765 4321</p>
+      <p><strong>Email:</strong> northbranch@nuggetsgym.com</p>
+      <p><strong>Instagram:</strong> <a href="https://instagram.com/nuggetsgymnorth" target="_blank">@nuggetsgymnorth</a></p>
+      <p><strong>Facebook:</strong> <a href="https://facebook.com/nuggetsgymnorth" target="_blank">NuggetsGYM North</a></p>
+      <p><strong>Google Maps:</strong> <a href="https://goo.gl/maps/yyyy" target="_blank">View Location</a></p>
+    </div>
+
+    <div class="branch">
+      <h3>South Branch</h3>
+      <p><strong>Address:</strong> 78 Energy Road, Galle, Sri Lanka</p>
+      <p><strong>Phone:</strong> +94 91 987 6543</p>
+      <p><strong>Email:</strong> southbranch@nuggetsgym.com</p>
+      <p><strong>Instagram:</strong> <a href="https://instagram.com/nuggetsgymsouth" target="_blank">@nuggetsgymsouth</a></p>
+      <p><strong>Facebook:</strong> <a href="https://facebook.com/nuggetsgymsouth" target="_blank">NuggetsGYM South</a></p>
+      <p><strong>Google Maps:</strong> <a href="https://goo.gl/maps/zzzz" target="_blank">View Location</a></p>
+    </div>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,626 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* BACKGROUND WITH BLUR YELLOW CIRCLES */
+body {
+  background: black;
+  color: white;
+  overflow-x: hidden;
+}
+
+.background-glow {
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(255,255,0,0.6), transparent 70%);
+  filter: blur(100px);
+  opacity: 0.35;
+  z-index: -1;
+}
+
+.circle1 { top: -150px; left: -100px; }
+.circle2 { bottom: -200px; right: -150px; }
+.circle3 { top: 200px; right: 200px; }
+.circle4 { bottom: 150px; left: 250px; }
+
+/* NAV BAR GLASS */
+.navbar {
+  position: fixed;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 15px;
+  border: 1px solid rgba(255,255,255,0.2);
+  z-index: 1000;
+}
+
+.navbar .logo {
+  color: yellow;
+  font-size: 27px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: yellow;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  color: #fff;
+}
+
+.gym-name {
+  font-size: 8rem;
+  font-weight: bold;
+  position: relative;
+}
+
+.glowing-logo {
+  color: #00000056; /* Bright yellow text */
+  text-shadow: 
+      0 0 5px #fff176,
+      0 0 10px #ffeb3b,
+      0 0 20px #fdd835,
+      0 0 30px #fbf72dd7,
+      0 0 40px #f9a825;
+  animation: glow 10.1s infinite alternate;
+}
+
+.quote {
+  font-size: 40px;
+  margin-top: 20px;
+}
+
+/* LOCATION SECTION */
+.locations h2 {
+  text-align: center;
+  font-size: 36px;
+  color: yellow;
+  margin-top: 40px;
+}
+
+.location-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 40px 20px;
+}
+
+.glass-card {
+  width: 200px;
+  padding: 30px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,0,0.1);
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,0,0.2);
+  color: yellow;
+  font-size: 20px;
+  font-weight: bold;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.glass-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255,255,0,0.2);
+  box-shadow: 0px 0px 20px rgba(255,255,0,0.5);
+}
+
+.contact {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 50px 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 3rem;
+  margin-bottom: 40px;
+}
+
+.branches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.branch {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 15px;
+  min-width: 250px;
+  max-width: 350px;
+  text-align: left;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.branch a {
+  color: #ffd700;
+  text-decoration: none;
+}
+
+.branch a:hover {
+  text-decoration: underline;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.contact-form button {
+  padding: 15px 30px;
+  border-radius: 10px;
+  border: none;
+  background: #ffd700;
+  color: #111;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #ffea00;
+}
+
+
+/* HERO SECTION WITH BACKGROUND & OVERLAY IMAGES */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+/* FULL HERO SHOWCASE IMAGE */
+.hero-image-container {
+  width: 100%;
+  height: 420px;
+  margin-top: 30px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(18px);
+}
+
+.hero-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(3px) brightness(0.6);
+  opacity: 0.75;
+  padding: 0;
+}
+
+.hero-overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: yellow;
+  text-shadow: 0 0 12px black;
+}
+
+.hero-overlay-text h2 {
+  font-size: 3.2rem;
+  margin-bottom: 10px;
+}
+
+.hero-overlay-text p {
+  font-size: 1.2rem;
+  color: white;
+}
+
+
+/* Glass Location Cards upgrade */
+.glass-card {
+  backdrop-filter: blur(15px);
+  background: rgba(255,255,255,0.08);
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.25);
+  padding: 30px;
+  width: 200px;
+  color: yellow;
+  font-size: 20px;
+  transition: 0.4s;
+  cursor: pointer;
+  box-shadow: 0px 0px 25px rgba(0,0,0,0.4);
+}
+
+.glass-card:hover {
+  transform: translateY(-10px);
+  background: rgba(255,255,0,0.25);
+  box-shadow: 0px 0px 25px rgba(255,255,0,0.5);
+}
+
+/* GENERAL STYLING */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: #111;
+  color: #fff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+
+/* BACKGROUND GLOW CIRCLES */
+.background-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(150px);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+.circle1 { width: 400px; height: 400px; background: #ffd700; top: 50px; left: 50px; }
+.circle2 { width: 300px; height: 300px; background: #ffea00; top: 200px; right: 100px; }
+.circle3 { width: 500px; height: 500px; background: #fff176; bottom: 100px; left: 150px; }
+.circle4 { width: 350px; height: 350px; background: #fff59d; bottom: 50px; right: 50px; }
+
+/* ABOUT CONTENT SECTION */
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  z-index: 1;
+  position: relative;
+}
+
+/* INDIVIDUAL GLASS CARD */
+.about-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+  overflow: hidden;
+  flex: 1 1 350px;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.about-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+}
+
+/* CARD IMAGE */
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* CARD TEXT */
+.card-text {
+  padding: 25px;
+}
+
+.card-text h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #ffd700;
+}
+
+.card-text p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.card-text ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.card-text ul li {
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+}
+
+/* CONTACT SECTION */
+.contact {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 60px 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 3rem;
+  margin-bottom: 40px;
+  color: #ffd700;
+}
+
+/* BRANCHES IN CONTACT */
+.branches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.branch {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 15px;
+  min-width: 250px;
+  max-width: 350px;
+  text-align: left;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.branch h3 {
+  color: #ffd700;
+  margin-bottom: 15px;
+}
+
+.branch a {
+  color: #ffd700;
+  text-decoration: none;
+}
+
+.branch a:hover {
+  text-decoration: underline;
+}
+
+/* CONTACT FORM */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.contact-form h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ffd700;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-form button {
+  padding: 15px 30px;
+  border-radius: 10px;
+  border: none;
+  background: #ffd700;
+  color: #111;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #ffea00;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .about-content {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .branches {
+    flex-direction: column;
+  }
+}
+/* REGISTER FORM SECTION */
+.register-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.register-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+  max-width: 500px;
+  width: 100%;
+  color: #fff;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.register-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+}
+
+.register-card h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #ffd700;
+  text-align: center;
+}
+
+.register-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.register-card input,
+.register-card select,
+.register-card textarea {
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1rem;
+}
+
+.register-card textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.register-card button {
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  background: #ffd700;
+  color: #111;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.register-card button:hover {
+  background: #ffea00;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .register-card {
+    padding: 30px 20px;
+  }
+}
+
+/* MORE CONTENT CARDS */
+.more-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.more-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+  overflow: hidden;
+  flex: 1 1 300px;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.more-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+}
+
+.more-card .card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.more-card .card-text {
+  padding: 20px;
+}
+
+.more-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #ffd700;
+}
+
+.more-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
